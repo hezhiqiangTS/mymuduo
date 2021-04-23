@@ -13,7 +13,7 @@
 #include <boost/scoped_ptr.hpp>
 #include <vector>
 
-#include "../muduo/base/Thread.h"
+#include "muduo/base/Thread.h"
 namespace muduo {
 
 class Channel;

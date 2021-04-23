@@ -5,10 +5,11 @@
 #ifndef MYMUDUO_EVENTLOOP_H
 #define MYMUDUO_EVENTLOOP_H
 
-#include <boost>
+#include "noncopyable.h"
+#include "CurrentThread.h"
 
 namespace muduo{
-    class EventLoop : boost::noncopyable{
+    class EventLoop : muduo::noncopyable{
 public:
     EventLoop();
     ~EventLoop();

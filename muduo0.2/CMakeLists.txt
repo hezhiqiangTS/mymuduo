@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 include_directories(${PROJECT_SOURCE_DIR})
 
-find_library(muduobase libmuduo_base.a /home/build/release-install-cpp11/lib/)
+find_library(muduobase libmuduo_base.a /root/mymuduo/contrib/build/release-cpp11/lib)
 find_package(Threads)
 
 set(SRC_LIST test3.cpp EventLoop.cpp Channel.cpp Poller.cpp)

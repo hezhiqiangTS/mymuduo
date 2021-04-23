@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.17)
 project(boost-download NONE)
 
 set (BOOST_SRC_DIR ${CMAKE_BINARY_DIR}/boost-src)
@@ -13,9 +13,9 @@ ExternalProject_Add(boost
 		SOURCE_DIR "${CMAKE_BINARY_DIR}/boost-src"
 		
 		CONFIGURE_COMMAND ./bootstrap.sh --prefix="${CMAKE_BINARY_DIR}/boost-build"
-		BUILD_COMMAND ./b2 --prefix="${CMAKE_BINARY_DIR}/boost-build" install -j 8
+		BUILD_COMMAND ./b2 -j8
         BUILD_IN_SOURCE true
 
-		INSTALL_COMMAND ""
+		INSTALL_COMMAND ./b2 install
 		INSTALL_DIR ${BOOST_INSTALL_DIR}
 		)

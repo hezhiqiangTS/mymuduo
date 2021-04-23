@@ -3,7 +3,7 @@
 #include <assert.h>
 #include <poll.h>
 
-#include "../muduo/base/Logging.h"
+#include "muduo/base/Logging.h"
 #include "Channel.h"
 
 using namespace muduo;
