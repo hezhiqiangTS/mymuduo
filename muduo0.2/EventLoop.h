@@ -1,3 +1,9 @@
+/*
+ * 每个线程只能包含一个EventLoop对象
+ *
+ * */
+
+
 #ifndef MUDUO_NET_EVENTLOOP_H
 #define MUDUO_NET_EVENTLOOP_H
 

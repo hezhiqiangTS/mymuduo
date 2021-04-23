@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.20)
+project(boost-download NONE)
+
+set (BOOST_SRC_DIR ${CMAKE_BINARY_DIR}/boost-src)
+set (BOOST_INSTALL_DIR ${CMAKE_BINARY_DIR}/boost-build)
+
+include(ExternalProject)
+ExternalProject_Add(boost
+		URL https://sourceforge.net/projects/boost/files/boost/1.63.0/boost_1_63_0.zip
+		UPDATE_COMMAND ""
+		PATCH_COMMAND ""
+		DOWNLOAD_DIR "${CMAKE_BINARY_DIR}/boost-src"
+		SOURCE_DIR "${CMAKE_BINARY_DIR}/boost-src"
+		
+		CONFIGURE_COMMAND ./bootstrap.sh --prefix="${CMAKE_BINARY_DIR}/boost-build"
+		BUILD_COMMAND ./b2 --prefix="${CMAKE_BINARY_DIR}/boost-build" install -j 8
+        BUILD_IN_SOURCE true
+
+		INSTALL_COMMAND ""
+		INSTALL_DIR ${BOOST_INSTALL_DIR}
+		)
