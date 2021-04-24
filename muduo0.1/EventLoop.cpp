@@ -3,6 +3,9 @@
 //
 
 #include "EventLoop.h"
+#include "muduo/base/Logging.h"
+
+using namespace muduo;
 
 __thread EventLoop *t_loopInThisThread = nullptr;
 

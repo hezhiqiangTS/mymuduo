@@ -5,8 +5,8 @@
 #ifndef MYMUDUO_EVENTLOOP_H
 #define MYMUDUO_EVENTLOOP_H
 
-#include "noncopyable.h"
-#include "CurrentThread.h"
+#include "muduo/base/noncopyable.h"
+#include "muduo/base/CurrentThread.h"
 
 namespace muduo{
     class EventLoop : muduo::noncopyable{
